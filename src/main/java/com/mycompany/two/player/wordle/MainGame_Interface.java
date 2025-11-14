@@ -23,8 +23,35 @@ public class MainGame_Interface extends javax.swing.JFrame {
     /**
      * Creates new form MainGame_Interface
      */
+    private int u_Attempts = 4;
+    private String cpuWord = ""; // global variable for the cpu word 
+    
+    
+    
     public MainGame_Interface() {
         initComponents();
+        
+        
+        try {
+            File fopen = new File("C:/Users/Joshua/Documents/NetBeansProjects/TWO-PLAYER-WORDLE/src/main/java/com/mycompany/two/player/wordle/words.txt");
+            Scanner cpuScanner = new Scanner(fopen);        
+        
+            //random number generator for the word 
+            Random word_Generator = new Random();
+            int max = 100;
+            int word_Generator_Index = word_Generator.nextInt(max);
+
+            while(cpuScanner.hasNextLine()){
+                for (int i = 0; i < word_Generator_Index-1; i++) {
+                    cpuScanner.nextLine();
+                }
+                cpuWord = cpuScanner.nextLine();
+                break;
+            }
+            cpuScanner.close();
+        } catch (Exception FileNotException) {
+            JOptionPane.showMessageDialog(null, "There was a problem in loading the Word Database");
+        }
     }
 
     /**
@@ -269,12 +296,15 @@ public class MainGame_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
        
     }//GEN-LAST:event_User_inputActionPerformed
-    private int u_Attempts = 4;
-    private String cpuWord = "camy";
+    
+    
+    
     private void User_input_confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_User_input_confirmActionPerformed
         String user_Input_Word  = "";
         user_Input_Word = User_input.getText().toLowerCase();
+        
         String []Conv_user_Input_Word = user_Input_Word.split("");
+        
         
         if(user_Input_Word.length() != 4){
             JOptionPane.showMessageDialog(null,"The word should be made of 4 Letters");
@@ -548,29 +578,7 @@ public class MainGame_Interface extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new MainGame_Interface().setVisible(true));
         
-//        File fopen = new File("C:/Users/Joshua/Documents/NetBeansProjects/TWO-PLAYER-WORDLE/src/main/java/com/mycompany/two/player/wordle/words.txt");
-//        Scanner cpuScanner = new Scanner(fopen);
-//        String cpuWord = "";
-//        int u_Attempts = 4;
-//        int pos_Correct_Counter = 0;
-//        int pos_Present_Counter = 0;
-//        int pos_NotPresent_Counter = 0;
-//        int []cpuWord_letterflag = {0,0,0,0};
-//        int []userInput_letterflag = {0,0,0,0};
-//        
-//        
-//         //random number generator for the word 
-//        Random word_Generator = new Random();
-//        int max = 100;
-//        int word_Generator_Index = word_Generator.nextInt(max);
-//        
-//        while(cpuScanner.hasNextLine()){
-//            for (int i = 0; i < word_Generator_Index-1; i++) {
-//                cpuScanner.nextLine();
-//            }
-//            cpuWord = cpuScanner.nextLine();
-//            break;
-//        }
+        
         
         
     }
