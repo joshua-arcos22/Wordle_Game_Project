@@ -81,10 +81,12 @@ public class MainGame_Interface extends javax.swing.JFrame {
         a4_l2 = new javax.swing.JLabel();
         a4_l3 = new javax.swing.JLabel();
         a4_l4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(240, 234, 214));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(java.awt.Color.white);
 
         User_input.setText("ENTER A 4 LETTER WORD");
         User_input.addActionListener(new java.awt.event.ActionListener() {
@@ -94,20 +96,24 @@ public class MainGame_Interface extends javax.swing.JFrame {
         });
 
         User_input_confirm.setText("Confirm");
+        User_input_confirm.setBorder(new javax.swing.border.MatteBorder(null));
+        User_input_confirm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         User_input_confirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 User_input_confirmActionPerformed(evt);
             }
         });
 
-        a1_l4.setBackground(new java.awt.Color(255, 255, 255));
+        a1_l4.setBackground(new java.awt.Color(240, 234, 214));
         a1_l4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a1_l4.setForeground(new java.awt.Color(240, 234, 214));
         a1_l4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a1_l4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a1_l4.setOpaque(true);
 
-        a1_l1.setBackground(new java.awt.Color(255, 255, 255));
+        a1_l1.setBackground(new java.awt.Color(240, 234, 214));
         a1_l1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a1_l1.setForeground(new java.awt.Color(240, 234, 214));
         a1_l1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a1_l1.setToolTipText("");
         a1_l1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -115,89 +121,107 @@ public class MainGame_Interface extends javax.swing.JFrame {
         a1_l1.setInheritsPopupMenu(false);
         a1_l1.setOpaque(true);
 
-        a1_l2.setBackground(new java.awt.Color(255, 255, 255));
+        a1_l2.setBackground(new java.awt.Color(240, 234, 214));
         a1_l2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a1_l2.setForeground(new java.awt.Color(240, 234, 214));
         a1_l2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a1_l2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a1_l2.setOpaque(true);
 
-        a1_l3.setBackground(new java.awt.Color(255, 255, 255));
+        a1_l3.setBackground(new java.awt.Color(240, 234, 214));
         a1_l3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a1_l3.setForeground(new java.awt.Color(240, 234, 214));
         a1_l3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a1_l3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a1_l3.setOpaque(true);
 
-        a2_l1.setBackground(new java.awt.Color(255, 255, 255));
+        a2_l1.setBackground(new java.awt.Color(240, 234, 214));
         a2_l1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a2_l1.setForeground(new java.awt.Color(240, 234, 214));
         a2_l1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a2_l1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a2_l1.setOpaque(true);
 
-        a2_l2.setBackground(new java.awt.Color(255, 255, 255));
+        a2_l2.setBackground(new java.awt.Color(240, 234, 214));
         a2_l2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a2_l2.setForeground(new java.awt.Color(240, 234, 214));
         a2_l2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a2_l2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a2_l2.setOpaque(true);
 
-        a2_l3.setBackground(new java.awt.Color(255, 255, 255));
+        a2_l3.setBackground(new java.awt.Color(240, 234, 214));
         a2_l3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a2_l3.setForeground(new java.awt.Color(240, 234, 214));
         a2_l3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a2_l3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a2_l3.setOpaque(true);
 
-        a2_l4.setBackground(new java.awt.Color(255, 255, 255));
+        a2_l4.setBackground(new java.awt.Color(240, 234, 214));
         a2_l4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a2_l4.setForeground(new java.awt.Color(240, 234, 214));
         a2_l4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a2_l4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a2_l4.setOpaque(true);
 
-        a3_l1.setBackground(new java.awt.Color(255, 255, 255));
+        a3_l1.setBackground(new java.awt.Color(240, 234, 214));
         a3_l1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a3_l1.setForeground(new java.awt.Color(240, 234, 214));
         a3_l1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a3_l1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a3_l1.setOpaque(true);
 
-        a3_l2.setBackground(new java.awt.Color(255, 255, 255));
+        a3_l2.setBackground(new java.awt.Color(240, 234, 214));
         a3_l2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a3_l2.setForeground(new java.awt.Color(240, 234, 214));
         a3_l2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a3_l2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a3_l2.setOpaque(true);
 
-        a3_l3.setBackground(new java.awt.Color(255, 255, 255));
+        a3_l3.setBackground(new java.awt.Color(240, 234, 214));
         a3_l3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a3_l3.setForeground(new java.awt.Color(240, 234, 214));
         a3_l3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a3_l3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a3_l3.setOpaque(true);
 
-        a3_l4.setBackground(new java.awt.Color(255, 255, 255));
+        a3_l4.setBackground(new java.awt.Color(240, 234, 214));
         a3_l4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a3_l4.setForeground(new java.awt.Color(240, 234, 214));
         a3_l4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a3_l4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a3_l4.setOpaque(true);
 
-        a4_l1.setBackground(new java.awt.Color(255, 255, 255));
+        a4_l1.setBackground(new java.awt.Color(240, 234, 214));
         a4_l1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a4_l1.setForeground(new java.awt.Color(240, 234, 214));
         a4_l1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a4_l1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a4_l1.setOpaque(true);
 
-        a4_l2.setBackground(new java.awt.Color(255, 255, 255));
+        a4_l2.setBackground(new java.awt.Color(240, 234, 214));
         a4_l2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a4_l2.setForeground(new java.awt.Color(240, 234, 214));
         a4_l2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a4_l2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a4_l2.setOpaque(true);
 
-        a4_l3.setBackground(new java.awt.Color(255, 255, 255));
+        a4_l3.setBackground(new java.awt.Color(240, 234, 214));
         a4_l3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a4_l3.setForeground(new java.awt.Color(240, 234, 214));
         a4_l3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a4_l3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a4_l3.setOpaque(true);
 
-        a4_l4.setBackground(new java.awt.Color(255, 255, 255));
+        a4_l4.setBackground(new java.awt.Color(240, 234, 214));
         a4_l4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a4_l4.setForeground(new java.awt.Color(240, 234, 214));
         a4_l4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a4_l4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a4_l4.setOpaque(true);
+
+        jLabel1.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("WORDLE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -205,9 +229,6 @@ public class MainGame_Interface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(User_input_confirm))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(89, 89, 89)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -244,13 +265,21 @@ public class MainGame_Interface extends javax.swing.JFrame {
                                 .addComponent(a4_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(a4_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(User_input, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(95, Short.MAX_VALUE))
+                            .addComponent(User_input, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addComponent(User_input_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -284,8 +313,8 @@ public class MainGame_Interface extends javax.swing.JFrame {
                     .addComponent(a4_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(User_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(User_input_confirm)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(User_input_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
@@ -308,7 +337,7 @@ public class MainGame_Interface extends javax.swing.JFrame {
         
         if(user_Input_Word.length() != 4){
             JOptionPane.showMessageDialog(null,"The word should be made of 4 Letters");
-        } 
+        } else {
         int []cpuWord_letterflag = {0,0,0,0};
         int []userInput_letterflag = {0,0,0,0};
             switch (u_Attempts) {
@@ -528,7 +557,7 @@ public class MainGame_Interface extends javax.swing.JFrame {
                             }
                         }
                     }
-                u_Attempts--;
+                u_Attempts-=2;
                 break;
                 
                 default:
@@ -539,7 +568,7 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "THE WORD IS "+ cpuWord);
                 u_Attempts = 0;
             }
-            
+        }
         
         
         
@@ -602,5 +631,6 @@ public class MainGame_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel a4_l2;
     private javax.swing.JLabel a4_l3;
     private javax.swing.JLabel a4_l4;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
