@@ -36,58 +36,75 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="a3_l1" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="a3_l2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="a3_l3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="a3_l4" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="User_input" min="-2" pref="216" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="a2_l1" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a3_l1" min="-2" pref="45" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="a2_l2" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a3_l2" min="-2" pref="45" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="a2_l3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a3_l3" min="-2" pref="45" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="a2_l4" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a3_l4" min="-2" pref="45" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="a1_l1" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="a2_l1" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="a2_l2" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="a2_l3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="a2_l4" min="-2" pref="45" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="a1_l1" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="a1_l2" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="a1_l3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="a1_l4" min="-2" pref="45" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="a4_l1" min="-2" pref="45" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="a1_l2" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a4_l2" min="-2" pref="45" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="a1_l3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a4_l3" min="-2" pref="45" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="a1_l4" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="a4_l4" min="-2" pref="45" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="a4_l1" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="a5_l1" min="-2" pref="45" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="a4_l2" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="a5_l2" min="-2" pref="45" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="a4_l3" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="a5_l3" min="-2" pref="45" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="a4_l4" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="a5_l4" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="User_input" alignment="1" min="-2" pref="216" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="250" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="back_Button" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="title_Game" min="-2" pref="250" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-                      <Component id="User_input_confirm" min="-2" pref="86" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                      <Component id="User_input_confirm" min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="80" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="attempt_Number" min="-2" pref="86" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -95,7 +112,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="title_Game" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="back_Button" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
@@ -141,10 +161,23 @@
                   <Component id="a4_l3" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="a5_l1" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="a5_l2" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="a5_l4" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="a5_l3" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="User_input" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="User_input_confirm" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="attempt_Number" min="-2" pref="17" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="User_input_confirm" min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -152,6 +185,12 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="User_input">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="1e" green="1e" red="1e" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="ENTER A 4 LETTER WORD"/>
       </Properties>
       <Events>
@@ -160,6 +199,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="User_input_confirm">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="1e" green="1e" red="1e" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Confirm"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -497,13 +542,108 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="title_Game">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Modern No. 20" size="36" style="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="WORDLE"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="attempt_Number">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Modern No. 20" size="12" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="back_Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&lt;- Back"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="back_ButtonMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="a5_l1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="a5_l2">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="a5_l3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="a5_l4">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d6" green="ea" red="f0" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
   </SubComponents>

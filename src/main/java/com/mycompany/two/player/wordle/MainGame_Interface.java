@@ -23,7 +23,7 @@ public class MainGame_Interface extends javax.swing.JFrame {
     /**
      * Creates new form MainGame_Interface
      */
-    private int u_Attempts = 4;
+    private int u_Attempts = 5; // IF ADDING MOR ATTEMPTS DO NOT FORGET TO CHNAGE THIS 
     private String cpuWord = ""; // global variable for the cpu word 
     
     
@@ -31,16 +31,21 @@ public class MainGame_Interface extends javax.swing.JFrame {
     public MainGame_Interface() {
         initComponents();
         
-        
+        // This will pre load the word as the app opens 
+        // I have a text document words.txt that has 100 4 letter word 
+        /* i have a randome number generator and based from that number 
+        i will traverse through the text file and it will pick a random word 
+        based from the random numebrg enerator */
         try {
             File fopen = new File("C:/Users/Joshua/Documents/NetBeansProjects/TWO-PLAYER-WORDLE/src/main/java/com/mycompany/two/player/wordle/words.txt");
             Scanner cpuScanner = new Scanner(fopen);        
         
             //random number generator for the word 
-            Random word_Generator = new Random();
-            int max = 100;
-            int word_Generator_Index = word_Generator.nextInt(max);
+            Random word_Generator = new Random(); // This is the consturctor for the number generator 
+            int max = 100; // RELIES ON THE NUMBER OF WORDS ON THE WORDS.TXT -- REMEMBER TO CHANGE THE VALUE OF THIS !!!!
+            int word_Generator_Index = word_Generator.nextInt(max); // Random number generator range - From 0 to 100
 
+            // loop for traversing 
             while(cpuScanner.hasNextLine()){
                 for (int i = 0; i < word_Generator_Index-1; i++) {
                     cpuScanner.nextLine();
@@ -48,6 +53,10 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 cpuWord = cpuScanner.nextLine();
                 break;
             }
+            
+            // Any code here will run before the clicks 
+            attempt_Number.setText("Attempt Left - 5");
+
             cpuScanner.close();
         } catch (Exception FileNotException) {
             JOptionPane.showMessageDialog(null, "There was a problem in loading the Word Database");
@@ -81,13 +90,21 @@ public class MainGame_Interface extends javax.swing.JFrame {
         a4_l2 = new javax.swing.JLabel();
         a4_l3 = new javax.swing.JLabel();
         a4_l4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        title_Game = new javax.swing.JLabel();
+        attempt_Number = new javax.swing.JLabel();
+        back_Button = new javax.swing.JLabel();
+        a5_l1 = new javax.swing.JLabel();
+        a5_l2 = new javax.swing.JLabel();
+        a5_l3 = new javax.swing.JLabel();
+        a5_l4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(240, 234, 214));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(java.awt.Color.white);
 
+        User_input.setBackground(new java.awt.Color(240, 234, 214));
+        User_input.setForeground(new java.awt.Color(30, 30, 30));
         User_input.setText("ENTER A 4 LETTER WORD");
         User_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +112,8 @@ public class MainGame_Interface extends javax.swing.JFrame {
             }
         });
 
+        User_input_confirm.setBackground(new java.awt.Color(240, 234, 214));
+        User_input_confirm.setForeground(new java.awt.Color(30, 30, 30));
         User_input_confirm.setText("Confirm");
         User_input_confirm.setBorder(new javax.swing.border.MatteBorder(null));
         User_input_confirm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -219,9 +238,46 @@ public class MainGame_Interface extends javax.swing.JFrame {
         a4_l4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a4_l4.setOpaque(true);
 
-        jLabel1.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("WORDLE");
+        title_Game.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
+        title_Game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title_Game.setText("WORDLE");
+
+        attempt_Number.setFont(new java.awt.Font("Modern No. 20", 0, 12)); // NOI18N
+
+        back_Button.setText("<- Back");
+        back_Button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                back_ButtonMouseClicked(evt);
+            }
+        });
+
+        a5_l1.setBackground(new java.awt.Color(240, 234, 214));
+        a5_l1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a5_l1.setForeground(new java.awt.Color(240, 234, 214));
+        a5_l1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        a5_l1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        a5_l1.setOpaque(true);
+
+        a5_l2.setBackground(new java.awt.Color(240, 234, 214));
+        a5_l2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a5_l2.setForeground(new java.awt.Color(240, 234, 214));
+        a5_l2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        a5_l2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        a5_l2.setOpaque(true);
+
+        a5_l3.setBackground(new java.awt.Color(240, 234, 214));
+        a5_l3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a5_l3.setForeground(new java.awt.Color(240, 234, 214));
+        a5_l3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        a5_l3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        a5_l3.setOpaque(true);
+
+        a5_l4.setBackground(new java.awt.Color(240, 234, 214));
+        a5_l4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        a5_l4.setForeground(new java.awt.Color(240, 234, 214));
+        a5_l4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        a5_l4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        a5_l4.setOpaque(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -231,54 +287,70 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(89, 89, 89)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(a3_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(a3_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(a3_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(a3_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(User_input, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(a2_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(a3_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(a2_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(a3_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(a2_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(a3_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(a2_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(a3_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(a2_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(a2_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(a2_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(a2_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(a1_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(a1_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(a1_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(a1_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(a1_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(a4_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(a1_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(a4_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(a1_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(a4_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(a1_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(a4_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(a4_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(a5_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(a4_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(a5_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(a4_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(a5_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(a4_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(User_input, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(a5_l4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
+                        .addComponent(back_Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(User_input_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                        .addGap(139, 139, 139)
+                        .addComponent(User_input_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(73, 73, 73))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(attempt_Number, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(155, 155, 155))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(back_Button))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,10 +384,20 @@ public class MainGame_Interface extends javax.swing.JFrame {
                         .addComponent(a4_l4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(a4_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(a5_l1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(a5_l2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(a5_l4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(a5_l3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(User_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(User_input_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(attempt_Number, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(User_input_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -341,8 +423,8 @@ public class MainGame_Interface extends javax.swing.JFrame {
         int []cpuWord_letterflag = {0,0,0,0};
         int []userInput_letterflag = {0,0,0,0};
             switch (u_Attempts) {
-                case 4:
-                    
+                case 5:
+                        attempt_Number.setText("Attempt Left - 4");
                         a1_l1.setText(Conv_user_Input_Word[0]);
                         a1_l1.setBackground(Color.gray);
                             
@@ -397,8 +479,9 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 break;
                 
                 
-                case 3:
-                    
+                case 4:
+                        attempt_Number.setText("Attempt Left - 3");
+                        
                         a2_l1.setText(Conv_user_Input_Word[0]);
                         a2_l1.setBackground(Color.gray);
                         
@@ -452,8 +535,9 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 break;
                 
                 
-                case 2:
-                    
+                case 3:
+                        attempt_Number.setText("Attempt Left - 2");
+                        
                         a3_l1.setText(Conv_user_Input_Word[0]);
                         a3_l1.setBackground(Color.gray);
                         
@@ -506,8 +590,9 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 u_Attempts--;
                 break;
                 
-                case 1:
-                    
+                case 2:
+                        attempt_Number.setText("Attempt Left - 1");
+                        
                         a4_l1.setText(Conv_user_Input_Word[0]);
                         a4_l1.setBackground(Color.gray);
                         
@@ -557,7 +642,64 @@ public class MainGame_Interface extends javax.swing.JFrame {
                             }
                         }
                     }
-                u_Attempts-=2;
+                u_Attempts--;
+                
+                break;
+                
+                case 1:
+                 attempt_Number.setText("Attempt Left - 0");
+                        
+                        a5_l1.setText(Conv_user_Input_Word[0]);
+                        a5_l1.setBackground(Color.gray);
+                        
+                        a5_l2.setText(Conv_user_Input_Word[1]);
+                        a5_l2.setBackground(Color.gray);
+                        
+                        a5_l3.setText(Conv_user_Input_Word[2]);
+                        a5_l3.setBackground(Color.gray);
+                        
+                        a5_l4.setText(Conv_user_Input_Word[3]);
+                        a5_l4.setBackground(Color.gray);
+                        
+                    for (int i = 0; i < 4; i++) {    
+                        if(user_Input_Word.charAt(i) == cpuWord.charAt(i)){
+                            switch (i) {
+                                case 0: a5_l1.setBackground(Color.GREEN);
+                                break;
+                                case 1: a5_l2.setBackground(Color.GREEN);
+                                break;
+                                case 2: a5_l3.setBackground(Color.GREEN);
+                                break;
+                                case 3: a5_l4.setBackground(Color.GREEN);
+                                break;
+                            }
+                            cpuWord_letterflag[i] = 1;
+                            userInput_letterflag[i] = 1;
+                        }
+                    }
+                    for (int i = 0; i < 4; i++) {
+                        if(userInput_letterflag[i] == 1){
+                            continue;
+                        }
+                        for (int j = 0; j < 4; j++) {
+                             if(user_Input_Word.charAt(i) == cpuWord.charAt(j) && cpuWord_letterflag[j] == 0){
+                                switch (i) {
+                                case 0: a5_l1.setBackground(Color.ORANGE);
+                                break;
+                                case 1: a5_l2.setBackground(Color.ORANGE);
+                                break;
+                                case 2: a5_l3.setBackground(Color.ORANGE);
+                                break;
+                                case 3: a5_l4.setBackground(Color   .ORANGE);
+                                break;
+                                }
+                                cpuWord_letterflag[j] = 1;
+                                break;
+                            }
+                        }
+                    }
+                u_Attempts--;
+                User_input_confirm.setText("Finish");
                 break;
                 
                 default:
@@ -565,7 +707,7 @@ public class MainGame_Interface extends javax.swing.JFrame {
                 break;
             }
             if(user_Input_Word.equalsIgnoreCase(cpuWord)){
-                JOptionPane.showMessageDialog(null, "THE WORD IS "+ cpuWord);
+                JOptionPane.showMessageDialog(null, "CONGRATULATIONS YOU GUESSED RIGHT THE WORD IS: "+ cpuWord);
                 u_Attempts = 0;
             }
         }
@@ -579,6 +721,11 @@ public class MainGame_Interface extends javax.swing.JFrame {
       
         
     }//GEN-LAST:event_User_input_confirmActionPerformed
+
+    // back button
+    private void back_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_ButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_back_ButtonMouseClicked
 
     
 
@@ -607,6 +754,8 @@ public class MainGame_Interface extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new MainGame_Interface().setVisible(true));
         
+        JOptionPane.showMessageDialog(null, "Hello");
+        
         
         
         
@@ -631,6 +780,12 @@ public class MainGame_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel a4_l2;
     private javax.swing.JLabel a4_l3;
     private javax.swing.JLabel a4_l4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel a5_l1;
+    private javax.swing.JLabel a5_l2;
+    private javax.swing.JLabel a5_l3;
+    private javax.swing.JLabel a5_l4;
+    private javax.swing.JLabel attempt_Number;
+    private javax.swing.JLabel back_Button;
+    private javax.swing.JLabel title_Game;
     // End of variables declaration//GEN-END:variables
 }
