@@ -8,14 +8,14 @@ package com.mycompany.two.player.wordle;
  *
  * @author Joshua
  */
-public class MainGame_Menu extends javax.swing.JFrame {
+public class MainGame_ModeSelect extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainGame_Menu.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainGame_ModeSelect.class.getName());
 
     /**
-     * Creates new form MainGame_Menu
+     * Creates new form MainGame_ModeSelect
      */
-    public MainGame_Menu() {
+    public MainGame_ModeSelect() {
         initComponents();
     }
 
@@ -29,36 +29,36 @@ public class MainGame_Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         title_Game = new javax.swing.JLabel();
-        btn_Tutorial = new javax.swing.JButton();
         btn_Play = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        btn_Tutorial = new javax.swing.JButton();
+        btn_Tutorial1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(400, 430));
 
         title_Game.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
         title_Game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title_Game.setText("WORDLE");
 
-        btn_Tutorial.setText("TUTORIAL");
-        btn_Tutorial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_TutorialActionPerformed(evt);
-            }
-        });
-
-        btn_Play.setText("PLAY");
+        btn_Play.setText("SINGLEPLAYER");
         btn_Play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_PlayActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("A simple word guessing game in java");
+        btn_Tutorial.setText("VERSUS");
+        btn_Tutorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_TutorialActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Joshua Oliver C. Arcos - BSIT 2A");
+        btn_Tutorial1.setText("CO-OP");
+        btn_Tutorial1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Tutorial1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,55 +67,49 @@ public class MainGame_Menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(69, 69, 69)
+                        .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(113, 113, 113)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(101, 101, 101)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 74, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(110, 110, 110)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
+                .addGap(56, 56, 56)
                 .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(24, 24, 24)
+                .addGap(54, 54, 54)
                 .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PlayActionPerformed
+        dispose();
+        MainGame_Interface btn_Singleplayer = new MainGame_Interface();
+        btn_Singleplayer.setVisible(true);
+    }//GEN-LAST:event_btn_PlayActionPerformed
+
     private void btn_TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TutorialActionPerformed
         dispose();
         MainGame_Tutorial btn_Tutorial = new MainGame_Tutorial();
         btn_Tutorial.setVisible(true);
-        
+
     }//GEN-LAST:event_btn_TutorialActionPerformed
 
-    private void btn_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PlayActionPerformed
-        dispose();
-        MainGame_ModeSelect btn_ModeSelect = new MainGame_ModeSelect();
-        btn_ModeSelect.setVisible(true);
-    }//GEN-LAST:event_btn_PlayActionPerformed
+    private void btn_Tutorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Tutorial1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Tutorial1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,14 +133,13 @@ public class MainGame_Menu extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new MainGame_Menu().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new MainGame_ModeSelect().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Play;
     private javax.swing.JButton btn_Tutorial;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btn_Tutorial1;
     private javax.swing.JLabel title_Game;
     // End of variables declaration//GEN-END:variables
 }

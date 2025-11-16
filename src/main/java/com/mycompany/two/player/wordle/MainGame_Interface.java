@@ -11,6 +11,7 @@ import java.util.Random;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.invoke.MethodHandles;
+import javax.security.auth.callback.ConfirmationCallback;
 
 /**
  *
@@ -724,7 +725,21 @@ public class MainGame_Interface extends javax.swing.JFrame {
 
     // back button
     private void back_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_ButtonMouseClicked
-        // TODO add your handling code here:
+        MainGame_Menu btn_back = new MainGame_Menu();
+        if(u_Attempts != 0){
+            int dialog_Result = JOptionPane.showConfirmDialog(null, "All porgress will be lost if you go back", "Go Back?", JOptionPane.YES_NO_OPTION);
+            if(dialog_Result == JOptionPane.YES_OPTION){
+                dispose();
+                btn_back.setVisible(true);
+            } else if(dialog_Result == JOptionPane.NO_OPTION){
+                //do nothing
+            }
+        } else if (u_Attempts == 0){
+                dispose();
+                btn_back.setVisible(true);
+
+        }
+        
     }//GEN-LAST:event_back_ButtonMouseClicked
 
     
