@@ -41,9 +41,12 @@ public class MainGame_Menu extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 600));
 
         title_Game.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
+        title_Game.setForeground(new java.awt.Color(210, 220, 182));
         title_Game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title_Game.setText("WORDLE");
 
+        btn_Tutorial.setBackground(new java.awt.Color(210, 220, 182));
+        btn_Tutorial.setForeground(new java.awt.Color(119, 136, 115));
         btn_Tutorial.setText("TUTORIAL");
         btn_Tutorial.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_Tutorial.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +55,8 @@ public class MainGame_Menu extends javax.swing.JFrame {
             }
         });
 
+        btn_Play.setBackground(new java.awt.Color(210, 220, 182));
+        btn_Play.setForeground(new java.awt.Color(119, 136, 115));
         btn_Play.setText("PLAY");
         btn_Play.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_Play.addActionListener(new java.awt.event.ActionListener() {
@@ -60,8 +65,10 @@ public class MainGame_Menu extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(210, 220, 182));
         jLabel1.setText("A simple word guessing game in java");
 
+        jLabel2.setForeground(new java.awt.Color(210, 220, 182));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Joshua Oliver C. Arcos - BSIT 2A");
 

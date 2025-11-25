@@ -56,7 +56,10 @@ public class MainGame_Tutorial extends javax.swing.JFrame {
         back_Button = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(400, 600));
+        setMinimumSize(new java.awt.Dimension(400, 600));
 
+        jPanel1.setBackground(new java.awt.Color(119, 136, 115));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 600));
 
         a1_l4.setBackground(new java.awt.Color(240, 234, 214));
@@ -95,12 +98,15 @@ public class MainGame_Tutorial extends javax.swing.JFrame {
         a1_l3.setOpaque(true);
 
         title_Game1.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
+        title_Game1.setForeground(new java.awt.Color(210, 220, 182));
         title_Game1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title_Game1.setText("WORDLE");
 
+        jLabel1.setForeground(new java.awt.Color(210, 220, 182));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("wordle is a simple word guessing game ");
 
+        jLabel2.setForeground(new java.awt.Color(210, 220, 182));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Guess the secret word under 5 attempts");
 
@@ -139,6 +145,7 @@ public class MainGame_Tutorial extends javax.swing.JFrame {
         a1_l8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a1_l8.setOpaque(true);
 
+        jLabel3.setForeground(new java.awt.Color(210, 220, 182));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("A letter that is not present appears Gray");
 
@@ -177,6 +184,7 @@ public class MainGame_Tutorial extends javax.swing.JFrame {
         a1_l12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a1_l12.setOpaque(true);
 
+        jLabel4.setForeground(new java.awt.Color(210, 220, 182));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("A letter that is  present appears Orange");
 
@@ -215,16 +223,21 @@ public class MainGame_Tutorial extends javax.swing.JFrame {
         a1_l16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         a1_l16.setOpaque(true);
 
+        jLabel5.setForeground(new java.awt.Color(210, 220, 182));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("A letter that is correct appears Green");
 
+        jButton1.setBackground(new java.awt.Color(210, 220, 182));
+        jButton1.setForeground(new java.awt.Color(119, 136, 115));
         jButton1.setText("PLAY");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        back_Button.setForeground(new java.awt.Color(210, 220, 182));
         back_Button.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         back_Button.setText("Back");
         back_Button.addMouseListener(new java.awt.event.MouseAdapter() {

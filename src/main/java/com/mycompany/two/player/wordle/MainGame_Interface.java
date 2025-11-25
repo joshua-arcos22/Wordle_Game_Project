@@ -25,9 +25,8 @@ public class MainGame_Interface extends javax.swing.JFrame {
     private int u_Attempts = 5; // IF ADDING MOR ATTEMPTS DO NOT FORGET TO CHNAGE THIS 
     private String cpuWord = ""; // global variable for the cpu word 
     private int u_Score = 0;
-    
-    
-    
+   
+   
     public MainGame_Interface() {
         initComponents();
         
@@ -193,7 +192,6 @@ public class MainGame_Interface extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(240, 234, 214));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(new java.awt.Color(240, 234, 214));

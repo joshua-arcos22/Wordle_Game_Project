@@ -28,17 +28,29 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         title_Game = new javax.swing.JLabel();
         btn_Play = new javax.swing.JButton();
         btn_Tutorial = new javax.swing.JButton();
         btn_Tutorial1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(400, 600));
+        setMinimumSize(new java.awt.Dimension(400, 600));
+        setPreferredSize(new java.awt.Dimension(400, 600));
+
+        jPanel1.setBackground(new java.awt.Color(119, 136, 115));
+        jPanel1.setMaximumSize(new java.awt.Dimension(400, 600));
+        jPanel1.setMinimumSize(new java.awt.Dimension(400, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(400, 600));
 
         title_Game.setFont(new java.awt.Font("Modern No. 20", 0, 36)); // NOI18N
+        title_Game.setForeground(new java.awt.Color(210, 220, 182));
         title_Game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title_Game.setText("WORDLE");
 
+        btn_Play.setBackground(new java.awt.Color(210, 220, 182));
+        btn_Play.setForeground(new java.awt.Color(119, 136, 115));
         btn_Play.setText("SINGLEPLAYER");
         btn_Play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,6 +58,8 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
             }
         });
 
+        btn_Tutorial.setBackground(new java.awt.Color(210, 220, 182));
+        btn_Tutorial.setForeground(new java.awt.Color(119, 136, 115));
         btn_Tutorial.setText("VERSUS");
         btn_Tutorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +67,8 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
             }
         });
 
+        btn_Tutorial1.setBackground(new java.awt.Color(210, 220, 182));
+        btn_Tutorial1.setForeground(new java.awt.Color(119, 136, 115));
         btn_Tutorial1.setText("CO-OP");
         btn_Tutorial1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,56 +76,69 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(81, Short.MAX_VALUE))
+                            .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(154, Short.MAX_VALUE)
                 .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(49, 49, 49)
                 .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addGap(186, 186, 186))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_Tutorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Tutorial1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Tutorial1ActionPerformed
+
+    private void btn_TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TutorialActionPerformed
+        dispose();
+        MainGame_Tutorial btn_Tutorial = new MainGame_Tutorial();
+        btn_Tutorial.setVisible(true);
+    }//GEN-LAST:event_btn_TutorialActionPerformed
 
     private void btn_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PlayActionPerformed
         dispose();
         MainGame_Interface btn_Singleplayer = new MainGame_Interface();
         btn_Singleplayer.setVisible(true);
     }//GEN-LAST:event_btn_PlayActionPerformed
-
-    private void btn_TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TutorialActionPerformed
-        dispose();
-        MainGame_Tutorial btn_Tutorial = new MainGame_Tutorial();
-        btn_Tutorial.setVisible(true);
-
-    }//GEN-LAST:event_btn_TutorialActionPerformed
-
-    private void btn_Tutorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Tutorial1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_Tutorial1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,6 +169,7 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
     private javax.swing.JButton btn_Play;
     private javax.swing.JButton btn_Tutorial;
     private javax.swing.JButton btn_Tutorial1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel title_Game;
     // End of variables declaration//GEN-END:variables
 }
