@@ -32,12 +32,11 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
         title_Game = new javax.swing.JLabel();
         btn_Play = new javax.swing.JButton();
         btn_Tutorial = new javax.swing.JButton();
-        btn_Tutorial1 = new javax.swing.JButton();
+        back_Button1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(400, 600));
         setMinimumSize(new java.awt.Dimension(400, 600));
-        setPreferredSize(new java.awt.Dimension(400, 600));
 
         jPanel1.setBackground(new java.awt.Color(119, 136, 115));
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 600));
@@ -67,12 +66,13 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
             }
         });
 
-        btn_Tutorial1.setBackground(new java.awt.Color(210, 220, 182));
-        btn_Tutorial1.setForeground(new java.awt.Color(119, 136, 115));
-        btn_Tutorial1.setText("CO-OP");
-        btn_Tutorial1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_Tutorial1ActionPerformed(evt);
+        back_Button1.setFont(new java.awt.Font("AirbusDisp2", 0, 12)); // NOI18N
+        back_Button1.setForeground(new java.awt.Color(210, 220, 182));
+        back_Button1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        back_Button1.setText("Back");
+        back_Button1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                back_Button1MouseClicked(evt);
             }
         });
 
@@ -86,11 +86,13 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
                         .addGap(115, 115, 115)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(title_Game, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(back_Button1)))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -101,10 +103,10 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(btn_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_Tutorial1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(btn_Tutorial, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(186, 186, 186))
+                .addGap(18, 18, 18)
+                .addComponent(back_Button1)
+                .addGap(219, 219, 219))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,13 +126,9 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_Tutorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Tutorial1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_Tutorial1ActionPerformed
-
     private void btn_TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TutorialActionPerformed
         dispose();
-        MainGame_Tutorial btn_Tutorial = new MainGame_Tutorial();
+        MainGame_EnterUserWord btn_Tutorial = new MainGame_EnterUserWord();
         btn_Tutorial.setVisible(true);
     }//GEN-LAST:event_btn_TutorialActionPerformed
 
@@ -139,6 +137,12 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
         MainGame_Interface btn_Singleplayer = new MainGame_Interface();
         btn_Singleplayer.setVisible(true);
     }//GEN-LAST:event_btn_PlayActionPerformed
+
+    private void back_Button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_Button1MouseClicked
+        dispose();
+        MainGame_Menu btn_back = new MainGame_Menu();
+        btn_back.setVisible(true);
+    }//GEN-LAST:event_back_Button1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -166,9 +170,9 @@ public class MainGame_ModeSelect extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel back_Button1;
     private javax.swing.JButton btn_Play;
     private javax.swing.JButton btn_Tutorial;
-    private javax.swing.JButton btn_Tutorial1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel title_Game;
     // End of variables declaration//GEN-END:variables

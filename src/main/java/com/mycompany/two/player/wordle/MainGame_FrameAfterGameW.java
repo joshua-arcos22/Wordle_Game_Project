@@ -17,8 +17,10 @@ public class MainGame_FrameAfterGameW extends javax.swing.JFrame {
      */
     public MainGame_FrameAfterGameW() {
         initComponents();
+        
+       
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,20 +39,27 @@ public class MainGame_FrameAfterGameW extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel2.setBackground(new java.awt.Color(119, 136, 115));
+        jPanel2.setForeground(new java.awt.Color(119, 136, 115));
         jPanel2.setMaximumSize(new java.awt.Dimension(400, 400));
         jPanel2.setMinimumSize(new java.awt.Dimension(400, 400));
 
         c1_text.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c1_text.setForeground(new java.awt.Color(210, 220, 182));
         c1_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c1_text.setText("Congratulations");
 
         c3_text_Score.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c3_text_Score.setForeground(new java.awt.Color(210, 220, 182));
         c3_text_Score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         c2_text.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c2_text.setForeground(new java.awt.Color(210, 220, 182));
         c2_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c2_text.setText("you guessed the right word");
 
+        backbtn.setBackground(new java.awt.Color(210, 220, 182));
+        backbtn.setForeground(new java.awt.Color(119, 136, 115));
         backbtn.setText("Back");
         backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +67,8 @@ public class MainGame_FrameAfterGameW extends javax.swing.JFrame {
             }
         });
 
+        nwgamebtn.setBackground(new java.awt.Color(210, 220, 182));
+        nwgamebtn.setForeground(new java.awt.Color(119, 136, 115));
         nwgamebtn.setText("New Game");
         nwgamebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,21 +123,35 @@ public class MainGame_FrameAfterGameW extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(416, 409));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
         dispose();
         MainGame_Menu btn_backGame_Menu = new MainGame_Menu();
         btn_backGame_Menu.setVisible(true);
+        
     }//GEN-LAST:event_backbtnActionPerformed
 
     private void nwgamebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nwgamebtnActionPerformed
+
         dispose();
         MainGame_Interface btn_reset = new MainGame_Interface();
         btn_reset.setVisible(true);
     }//GEN-LAST:event_nwgamebtnActionPerformed
-
+    
+    public int User_Score;
+    public void setScore(int User_Score){
+        this.User_Score = User_Score;
+    }
+    
+    public void displayScore(){
+        c3_text_Score.setText("Your Score is: " + User_Score);
+    }
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -147,9 +172,10 @@ public class MainGame_FrameAfterGameW extends javax.swing.JFrame {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new MainGame_FrameAfterGameW().setVisible(true));
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

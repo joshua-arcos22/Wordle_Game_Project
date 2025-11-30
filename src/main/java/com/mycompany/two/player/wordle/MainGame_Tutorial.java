@@ -4,6 +4,9 @@
  */
 package com.mycompany.two.player.wordle;
 
+import java.io.FileNotFoundException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Joshua
@@ -380,6 +383,7 @@ public class MainGame_Tutorial extends javax.swing.JFrame {
         dispose();
         MainGame_ModeSelect btn_ModeSelect = new MainGame_ModeSelect();
         btn_ModeSelect.setVisible(true);
+  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void back_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_ButtonMouseClicked

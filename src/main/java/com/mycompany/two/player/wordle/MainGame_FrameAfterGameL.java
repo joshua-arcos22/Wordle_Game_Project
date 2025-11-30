@@ -12,6 +12,20 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainGame_FrameAfterGameL.class.getName());
 
+    
+    
+    public MainGame_FrameAfterGameL(String correctWord) { 
+        initComponents();
+        
+        // You can still use logic for stats, but use the passed variable for the word
+        scoreLogic currUserScore = new scoreLogic(); 
+        
+        // 2. Set the text using the variable passed from the previous screen
+        c3_text_Score1.setText(correctWord);
+        
+        c4_Streak_Score.setText("Streak Score: " + currUserScore.currentStreakScore + "          Streak: " + currUserScore.currentStreakCount);
+    }
+    
     /**
      * Creates new form MainGame_FrameAfterGameL
      */
@@ -30,27 +44,35 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         c1_text = new javax.swing.JLabel();
-        c3_text_Score = new javax.swing.JLabel();
+        c4_Streak_Score = new javax.swing.JLabel();
         c2_text = new javax.swing.JLabel();
         backbtn = new javax.swing.JButton();
         nwgamebtn = new javax.swing.JButton();
+        c3_text_Score1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel2.setBackground(new java.awt.Color(119, 136, 115));
+        jPanel2.setForeground(new java.awt.Color(210, 220, 182));
         jPanel2.setMaximumSize(new java.awt.Dimension(400, 400));
         jPanel2.setMinimumSize(new java.awt.Dimension(400, 400));
 
         c1_text.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c1_text.setForeground(new java.awt.Color(210, 220, 182));
         c1_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        c1_text.setText("Congratulations");
+        c1_text.setText("nice try");
 
-        c3_text_Score.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
-        c3_text_Score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        c4_Streak_Score.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c4_Streak_Score.setForeground(new java.awt.Color(210, 220, 182));
+        c4_Streak_Score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         c2_text.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c2_text.setForeground(new java.awt.Color(210, 220, 182));
         c2_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        c2_text.setText("you guessed the right word");
+        c2_text.setText("the word was:");
 
+        backbtn.setBackground(new java.awt.Color(210, 220, 182));
+        backbtn.setForeground(new java.awt.Color(119, 136, 115));
         backbtn.setText("Back");
         backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,12 +80,18 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
             }
         });
 
+        nwgamebtn.setBackground(new java.awt.Color(210, 220, 182));
+        nwgamebtn.setForeground(new java.awt.Color(119, 136, 115));
         nwgamebtn.setText("New Game");
         nwgamebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nwgamebtnActionPerformed(evt);
             }
         });
+
+        c3_text_Score1.setFont(new java.awt.Font("AirbusDisp2", 1, 14)); // NOI18N
+        c3_text_Score1.setForeground(new java.awt.Color(210, 220, 182));
+        c3_text_Score1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -72,18 +100,24 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(nwgamebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(c3_text_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(c2_text, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(c1_text, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(61, 61, 61))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(nwgamebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(c2_text, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(61, 61, 61))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(c3_text_Score1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(c1_text, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(c4_Streak_Score, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,12 +127,14 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(c2_text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(c3_text_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addComponent(c3_text_Score1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(c4_Streak_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nwgamebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,7 +148,8 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(416, 409));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
@@ -159,7 +196,8 @@ public class MainGame_FrameAfterGameL extends javax.swing.JFrame {
     private javax.swing.JButton backbtn;
     private javax.swing.JLabel c1_text;
     private javax.swing.JLabel c2_text;
-    private javax.swing.JLabel c3_text_Score;
+    private javax.swing.JLabel c3_text_Score1;
+    private javax.swing.JLabel c4_Streak_Score;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton nwgamebtn;
     // End of variables declaration//GEN-END:variables

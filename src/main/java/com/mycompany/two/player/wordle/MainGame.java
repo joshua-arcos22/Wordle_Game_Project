@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
  *
  * @author Joshua
  */
+// THIS IS JUST THE PROTOTYPE IGNORE THIS 
 public class MainGame {
     public static void main(String[] args) throws FileNotFoundException{
         File fopen = new File("C:/Users/Joshua/Documents/NetBeansProjects/TWO-PLAYER-WORDLE/src/main/java/com/mycompany/two/player/wordle/words.txt");
